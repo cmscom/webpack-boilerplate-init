@@ -1,98 +1,86 @@
-# 📦 webpack Boilerplate
+# 📦 webpack Boilerplate for CMScom
+
+Original: https://github.com/taniarascia/webpack-boilerplate
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Sensible webpack 5 boilerplate using Babel, PostCSS and Sass.
 
-## Installation
+# パッケージの使い方
 
-Clone this repo and npm install.
+## セットアップ
 
-```bash
-npm i
+```
+$ git clone git@github.com:cmscom/webpack-boilerplate-init.git
+$ cd webpack-boilerplate-init
+$ npm i
 ```
 
-## Usage
+## 開発モード
 
-### Development server
+開発コード
 
-```bash
-npm start
+- src/index.js
+- src/template.html
+
+```
+$ npm run start
 ```
 
-You can view the development server at `localhost:8080`.
+http://localhost:5080/
+が開く
 
-### Production build
+## ビルド
 
-```bash
-npm run build
+```
+$ npm run build
 ```
 
-> Note: Install [http-server](https://www.npmjs.com/package/http-server) globally to deploy a simple server.
+distフォルダに生成される
 
-```bash
+ビルド済みのファイルを確認
+
+```
 npm i -g http-server
 ```
 
-You can view the deploy by creating a server in `dist`.
-
-```bash
+```
 cd dist && http-server
 ```
 
-## Features
+# パッケージの作り方
 
-- [webpack](https://webpack.js.org/)
-- [Babel](https://babeljs.io/)
-- [Sass](https://sass-lang.com/)
-- [PostCSS](https://postcss.org/)
+このパッケージを作っていく流れを記載
 
-## Dependencies
 
-### webpack
+https://github.com/taniarascia/webpack-boilerplate を元に
+2021年11月5日時点のものをコピーしたレポジトリを以下に作った
+https://github.com/cmscom/webpack-boilerplate-init
 
-- [`webpack`](https://github.com/webpack/webpack) - Module and asset bundler.
-- [`webpack-cli`](https://github.com/webpack/webpack-cli) - Command line interface for webpack
-- [`webpack-dev-server`](https://github.com/webpack/webpack-dev-server) - Development server for webpack
-- [`webpack-merge`](https://github.com/survivejs/webpack-merge) - Simplify development/production configuration
-- [`cross-env`](https://github.com/kentcdodds/cross-env) - Cross platform configuration
+webpack-boilerplate-init から必要なものを変更
 
-### Babel
+## フォルダの作成
 
-- [`@babel/core`](https://www.npmjs.com/package/@babel/core) - Transpile ES6+ to backwards compatible JavaScript
-- [`@babel/plugin-proposal-class-properties`](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties) - Use properties directly on a class (an example Babel config)
-- [`@babel/preset-env`](https://babeljs.io/docs/en/babel-preset-env) - Smart defaults for Babel
+- config
+- public
+- src
 
-### Loaders
+## ファイルの作成
 
-- [`babel-loader`](https://webpack.js.org/loaders/babel-loader/) - Transpile files with Babel and webpack
-- [`sass-loader`](https://webpack.js.org/loaders/sass-loader/) - Load SCSS and compile to CSS
-  - [`node-sass`](https://github.com/sass/node-sass) - Node Sass
-- [`postcss-loader`](https://webpack.js.org/loaders/postcss-loader/) - Process CSS with PostCSS
-  - [`postcss-preset-env`](https://www.npmjs.com/package/postcss-preset-env) - Sensible defaults for PostCSS
-- [`css-loader`](https://webpack.js.org/loaders/css-loader/) - Resolve CSS imports
-- [`style-loader`](https://webpack.js.org/loaders/style-loader/) - Inject CSS into the DOM
+- package.json
+- config/*
+- scr/index.js
+- src/template.html
 
-### Plugins
 
-- [`clean-webpack-plugin`](https://github.com/johnagan/clean-webpack-plugin) - Remove/clean build folders
-- [`copy-webpack-plugin`](https://github.com/webpack-contrib/copy-webpack-plugin) - Copy files to build directory
-- [`html-webpack-plugin`](https://github.com/jantimon/html-webpack-plugin) - Generate HTML files from template
-- [`mini-css-extract-plugin`](https://github.com/webpack-contrib/mini-css-extract-plugin) - Extract CSS into separate files
-- [`css-minimizer-webpack-plugin`](https://webpack.js.org/plugins/css-minimizer-webpack-plugin/) - Optimize and minimize CSS assets
+## package.json
 
-### Linters
+- CSS関係の設定を削除
+- 属性情報の変更: "name", "version", "description"
 
-- [`eslint`](https://github.com/eslint/eslint) - Enforce styleguide across application
-- [`eslint-config-airbnb-base`](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base) - Base styleguide to enforce rules
-- [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier) - Implement prettier rules
-- [`eslint-plugin-import`](https://github.com/benmosher/eslint-plugin-import) - Implement import rules
-- [`eslint-import-resolver-webpack`](https://github.com/benmosher/eslint-plugin-import/tree/master/resolvers/webpack) - Throw exceptions for import/export in webpack
-- [`prettier`](https://github.com/prettier/prettier) - Dependency for `prettier-webpack-plugin` plugin
+# Author
 
-## Author
-
-- [Tania Rascia](https://www.taniarascia.com)
+- Original: [Tania Rascia](https://www.taniarascia.com)
+- Customize: [Manabu TERADA](https://github.com/terapyon)
 
 ## License
 
